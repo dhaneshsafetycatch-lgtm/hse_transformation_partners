@@ -1,4 +1,4 @@
-import { Target, Eye, Compass, Award, Briefcase, Globe2, ShieldCheck, ArrowRight, User, BadgeCheck, Sparkles, Cpu, Layers } from 'lucide-react';
+import { Target, Eye, Compass, Award, Briefcase, Globe2, ShieldCheck, ArrowRight, BadgeCheck, Sparkles, Cpu, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
@@ -57,11 +57,13 @@ function MasterySection() {
             <div className="relative lg:sticky lg:top-28">
               <div className="absolute -inset-4 bg-gradient-to-br from-cyan/20 to-accent/10 blur-3xl rounded-full" />
               <div className="relative rounded-3xl glass-dark p-8 shadow-glow text-center">
-                <div className="relative mx-auto h-28 w-28">
+                <div className="relative mx-auto h-40 w-40">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan to-accent opacity-30 blur-xl animate-pulse-glow" />
-                  <div className="relative h-28 w-28 rounded-full bg-gradient-to-br from-primary-800 to-ink-900 border border-cyan/30 flex items-center justify-center">
-                    <User className="h-12 w-12 text-cyan-light" strokeWidth={1.4} />
-                  </div>
+                  <img
+                    src="/dhanesh.png"
+                    alt="Dhanesh Kuzhuveliparambil Manoharan - Founder & Principal Consultant"
+                    className="relative h-40 w-40 rounded-full object-cover border-2 border-cyan/30 shadow-glow"
+                  />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-bold text-white leading-tight">
                   Dhanesh Kuzhuveliparambil Manoharan
