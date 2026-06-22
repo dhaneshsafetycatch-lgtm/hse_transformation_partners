@@ -29,7 +29,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-2.5 group">
           <div className="relative h-12 w-12 flex-shrink-0">
             <img 
-              src="/image.png" 
+              src="/logo.png" 
               alt="HSE Transformation Partners Logo" 
               className="h-full w-full object-contain drop-shadow-lg group-hover:drop-shadow-xl transition-all"
             />
