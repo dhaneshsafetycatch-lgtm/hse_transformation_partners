@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ShieldCheck } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { NAV_LINKS, COMPANY } from '../data/content';
 
 export default function Navbar() {
@@ -27,11 +27,14 @@ export default function Navbar() {
     >
       <nav className="container-x flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="relative">
-            <div className="absolute inset-0 bg-cyan/40 blur-lg rounded-lg group-hover:bg-cyan/60 transition" />
-            <ShieldCheck className="relative h-8 w-8 text-cyan-light" strokeWidth={1.8} />
+          <div className="relative h-12 w-12 flex-shrink-0">
+            <img 
+              src="/image.png" 
+              alt="HSE Transformation Partners Logo" 
+              className="h-full w-full object-contain drop-shadow-lg group-hover:drop-shadow-xl transition-all"
+            />
           </div>
-          <div className="leading-none">
+          <div className="leading-none hidden sm:block">
             <div className="font-display font-bold text-white text-sm md:text-base tracking-tight">
               HSE <span className="gradient-text">Transformation</span>
             </div>
