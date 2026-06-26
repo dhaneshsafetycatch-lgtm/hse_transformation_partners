@@ -12,6 +12,8 @@ import ContactPage from './pages/ContactPage';
 import CalculatorsPage from './pages/CalculatorsPage';
 import CalculatorPage from './pages/CalculatorPage';
 import PartnershipPage from './pages/PartnershipPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -36,6 +38,8 @@ export default function App() {
             <Route path="/calculators/:slug" element={<CalculatorPage />} />
             <Route path="/partnership" element={<PartnershipPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
