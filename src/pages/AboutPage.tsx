@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import { Reveal } from '../components/Reveal';
-import { COMPANY, STANDARDS } from '../data/content';
+import { COMPANY, STANDARDS, CLIENTS_PORTFOLIO, SERVICES_DELIVERED } from '../data/content';
 
 const QUALIFICATIONS = [
   'Postgraduate Diploma in HSE Management (United Kingdom)',
@@ -353,6 +353,73 @@ function StandardsBand() {
   );
 }
 
+function ClientsPortfolio() {
+  return (
+    <section className="section-pad bg-white">
+      <div className="container-x">
+        <Reveal>
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="eyebrow">Portfolio</span>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-bold text-ink-900">Clients & Organizations Served</h2>
+          </div>
+        </Reveal>
+        <div className="grid gap-6 md:grid-cols-2">
+          {CLIENTS_PORTFOLIO.map((group, i) => (
+            <Reveal key={group.sector} delay={i * 60}>
+              <div className="rounded-2xl bg-cloud border border-ink-900/8 p-6 card-hover hover:border-cyan/40 hover:shadow-glass h-full">
+                <h3 className="font-display text-base font-bold text-primary-800 mb-3 flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-cyan shrink-0" />
+                  {group.sector}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {group.clients.map((c) => (
+                    <span key={c} className="inline-block rounded-lg bg-white border border-ink-900/8 px-3 py-1.5 text-xs font-medium text-ink-700/80">
+                      {c}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ServicesDelivered() {
+  return (
+    <section className="section-pad bg-ink-950 relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-dark bg-[size:50px_50px] opacity-15" />
+      <div className="absolute top-1/4 right-0 h-80 w-80 bg-cyan/15 blur-[120px] rounded-full animate-float" />
+      <div className="relative container-x">
+        <Reveal>
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="eyebrow">Deliverables</span>
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-bold text-white">Services Delivered</h2>
+          </div>
+        </Reveal>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {SERVICES_DELIVERED.map((s, i) => (
+            <Reveal key={s.category} delay={i * 80}>
+              <div className="rounded-2xl glass-dark p-6 card-hover hover:border-cyan/30 h-full">
+                <h3 className="font-display text-sm font-bold text-cyan-light uppercase tracking-wider mb-4">{s.category}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {s.items.map((item) => (
+                    <span key={item} className="inline-block rounded-lg bg-white/5 border border-white/10 px-2.5 py-1 text-xs text-white/70">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function AboutPage() {
   return (
     <>
@@ -366,6 +433,8 @@ export default function AboutPage() {
       <MasterySection />
       <Credentials />
       <CareerTimeline />
+      <ClientsPortfolio />
+      <ServicesDelivered />
       <StandardsBand />
       <section className="py-16 bg-ink-950">
         <div className="container-x text-center">

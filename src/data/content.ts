@@ -179,6 +179,68 @@ export const CERTIFICATIONS = [
 
 export const STANDARDS = ['ISO 45001', 'OSHA', 'ILO', 'ADNOC COP', 'NEBOSH', 'IOSH'];
 
+export const CLIENTS_PORTFOLIO = [
+  {
+    sector: 'Aviation & Airport Sector',
+    clients: ['Adani Navi Mumbai International Airport', 'Noida International Airport', 'Airport Infrastructure Contractors', 'Aviation Construction Contractors'],
+  },
+  {
+    sector: 'Oil & Gas Sector',
+    clients: ['ADNOC Group', 'Shell Projects', 'Petrofac', 'JGC Corporation', 'KBR', 'Dow / Aramco Projects', 'Oil & Gas EPC Contractors'],
+  },
+  {
+    sector: 'Power & Energy Sector',
+    clients: ['NTPC Limited', 'NTPC Kayamkulam', 'Power Generation Companies', 'Energy Infrastructure Projects'],
+  },
+  {
+    sector: 'Manufacturing & Industrial Sector',
+    clients: ['Jindal Steel', 'Grasim Industries', 'Havells India', 'Blue Star', 'Manufacturing Facilities', 'Industrial Processing Plants'],
+  },
+  {
+    sector: 'Infrastructure & Construction Sector',
+    clients: ['Larsen & Toubro (L&T)', 'Tata Projects', 'Kalpataru Projects', 'Infrastructure Development Contractors', 'EPC Contractors', 'Construction Companies'],
+  },
+  {
+    sector: 'Data Centre Sector',
+    clients: ['CTRLS Data Centres Ltd', 'Critical Infrastructure Facilities', 'Data Centre Operators'],
+  },
+  {
+    sector: 'Environmental & Utility Sector',
+    clients: ['Veolia', 'Utility Service Providers', 'Environmental Management Organizations'],
+  },
+  {
+    sector: 'Ports, Logistics & Marine Sector',
+    clients: ['Vizhinjam Port Project', 'Port Operations Organizations', 'Logistics Companies', 'Marine Infrastructure Contractors'],
+  },
+  {
+    sector: 'Rail & Metro Sector',
+    clients: ['Chennai Metro Related Projects', 'Metro Rail Contractors', 'Rail Infrastructure Organizations'],
+  },
+  {
+    sector: 'Training & Certification Sector',
+    clients: ['Safety Catch Safety Training & Consulting Pvt Ltd', 'NEBOSH Training Programs', 'IOSH Training Programs', 'Professional Competency Development Programs'],
+  },
+];
+
+export const SERVICES_DELIVERED = [
+  {
+    category: 'Training Programs',
+    items: ['Confined Space Entry', 'Work at Height', 'Lifting & Rigging', 'Electrical Safety', 'Fire Safety', 'Chemical Safety', 'COSHH', 'PTW', 'LOTO', 'HIRA', 'JSA', 'Incident Investigation', 'Contractor Safety', 'Safety Leadership'],
+  },
+  {
+    category: 'Consulting Services',
+    items: ['HSE Management Systems', 'ISO 45001 Implementation', 'Compliance Audits', 'HSE Assurance', 'Emergency Response Planning', 'Contractor Assessments', 'Safety Culture Programs'],
+  },
+  {
+    category: 'Learning & Development',
+    items: ['NEBOSH IGC', 'NEBOSH Diploma', 'IOSH Managing Safely', 'IOSH Working Safely', 'Supervisor Development', 'Safety Officer Development'],
+  },
+  {
+    category: 'Digital HSE Solutions',
+    items: ['HSE Dashboards', 'AI-Based Safety Analytics', 'Digital Inspection Systems', 'Competency Tracking Systems', 'Risk Monitoring Platforms'],
+  },
+];
+
 export const NAV_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
