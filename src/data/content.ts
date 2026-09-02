@@ -1,6 +1,6 @@
 import {
   ShieldCheck, HardHat, Flame, FileBadge, Crown, Cpu, GraduationCap, LayoutDashboard,
-  Wind, Anchor, Zap, Building2, Train, Factory, Server,
+  Wind, Anchor, Zap, Building2, Train, Factory, Server, Video, ClipboardCheck,
 } from 'lucide-react';
 
 export const COMPANY = {
@@ -97,6 +97,13 @@ export const SERVICES = [
     short: 'Power BI Dashboards, KPI Tracking, CAPA Trackers, Digital PTW & Safety Reporting.',
     items: ['Power BI Dashboards', 'KPI Tracking Systems', 'CAPA Trackers', 'Audit Tracking', 'Digital PTW Concepts', 'Digital Safety Reporting'],
   },
+  {
+    id: 'remote-assurance',
+    title: 'Remote HSE Assurance',
+    icon: Video,
+    short: 'Evidence-led digital assurance, remote auditing, AI-assisted analysis and continuous HSE performance monitoring.',
+    items: ['Digital HSE Health Check', 'Professional Remote HSE Audit', 'AI-Assisted Advanced Audit', 'Hybrid Digital HSE Assurance', 'Continuous Digital HSE Assurance', 'Evidence & Quality Governance'],
+  },
 ];
 
 export const TRAINING_PROGRAMS = [
@@ -138,6 +145,34 @@ export const TRAINING_CATEGORIES = [
   { title: 'Oil & Gas Safety', desc: 'PTW, SIMOPS, confined space, shutdown & process safety training.', icon: Flame },
   { title: 'Leadership Programs', desc: 'Safety leadership, supervisor development & behavioral safety.', icon: Crown },
   { title: 'Custom Corporate Programs', desc: 'Tailored competency development for your organization’s needs.', icon: GraduationCap },
+];
+
+export const REMOTE_ASSURANCE_OFFERINGS = [
+  {
+    title: 'RA-1 Digital HSE Health Check',
+    desc: 'A focused review of HSE maturity, systems, documentation, performance data and priority risks to establish a practical improvement baseline.',
+    icon: ClipboardCheck,
+  },
+  {
+    title: 'RA-2 Professional Remote HSE Audit',
+    desc: 'A structured remote audit using interviews, document review, digital evidence and transparent findings aligned to the agreed audit scope.',
+    icon: Video,
+  },
+  {
+    title: 'RA-3 AI-Assisted Advanced Audit',
+    desc: 'Auditor-led analysis supported by document screening and evidence processing, with human-in-the-loop decisions for every material conclusion.',
+    icon: Cpu,
+  },
+  {
+    title: 'RA-4 Hybrid Digital HSE Assurance',
+    desc: 'A coordinated blend of remote review and targeted physical verification for sites, activities or controls requiring additional confidence.',
+    icon: ShieldCheck,
+  },
+  {
+    title: 'RA-5 Continuous Digital HSE Assurance',
+    desc: 'An ongoing assurance cycle with performance monitoring, management reviews, corrective-action follow-up and trend-based risk visibility.',
+    icon: LayoutDashboard,
+  },
 ];
 
 export const DIGITAL_OFFERINGS = [

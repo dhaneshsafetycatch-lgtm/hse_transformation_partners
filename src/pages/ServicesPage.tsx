@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import { Reveal } from '../components/Reveal';
-import { SERVICES, COMPANY } from '../data/content';
+import { SERVICES, COMPANY, REMOTE_ASSURANCE_OFFERINGS } from '../data/content';
 
 function ServiceDetail({ service, index }: { service: typeof SERVICES[number]; index: number }) {
   const dark = index % 2 === 1;
@@ -57,6 +57,60 @@ function ServiceDetail({ service, index }: { service: typeof SERVICES[number]; i
               Request this Service <ArrowRight className="h-4 w-4" />
             </Link>
           </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function RemoteAssurancePortfolio() {
+  const capabilities = [
+    { title: 'Evidence Management', items: ['Evidence Confidence Level (ECL)', 'Triangulation', 'Chain of Custody'] },
+    { title: 'Video Protocol', items: ['Video Evidence Request (VER)', 'Context & Continuity', 'Recording Safety'] },
+    { title: 'AI Governance', items: ['Auditor-Led Analysis', 'Document Screening', 'Human-in-the-Loop Decisions'] },
+    { title: 'Quality & Performance', items: ['Independent QA Review', 'Auditor Authorization', 'Competency Matrix', 'Business KPIs', 'Audit Quality Metrics', 'Management Review'] },
+  ];
+
+  return (
+    <section className="section-pad bg-white">
+      <div className="container-x">
+        <SectionHeading
+          eyebrow="HTP DVAS Remote HSE Assurance"
+          title={<>Assurance that is <span className="gradient-text">evidence-led</span></>}
+          subtitle="A structured remote assurance model combining disciplined audit delivery, secure evidence handling, human-led AI governance and measurable performance improvement."
+        />
+        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {REMOTE_ASSURANCE_OFFERINGS.map((offering, i) => {
+            const Icon = offering.icon;
+            return (
+              <Reveal key={offering.title} delay={i * 70}>
+                <div className="h-full rounded-2xl bg-cloud border border-primary-900/5 p-6 card-hover hover:border-cyan/30 hover:shadow-elev">
+                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary-800 to-primary-600 text-cyan-light">
+                    <Icon className="h-5 w-5" strokeWidth={1.7} />
+                  </div>
+                  <h3 className="mt-5 font-display text-lg font-bold text-ink-900">{offering.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-ink-700/75">{offering.desc}</p>
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
+          {capabilities.map((capability, i) => (
+            <Reveal key={capability.title} delay={i * 90}>
+              <div className="rounded-2xl bg-ink-950 p-6 relative overflow-hidden">
+                <div className="absolute inset-0 bg-grid-dark bg-[size:40px_40px] opacity-15" />
+                <div className="relative">
+                  <h3 className="font-display text-lg font-bold text-white">{capability.title}</h3>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {capability.items.map((item) => (
+                      <span key={item} className="rounded-full border border-cyan/20 bg-cyan/10 px-3 py-1.5 font-btn text-xs text-cyan-light">{item}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
@@ -143,10 +197,11 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Our Services"
         title={<>HSE expertise across <span className="gradient-text-white">every domain</span></>}
-        subtitle="From HSE consulting and specialized domain safety to ISO implementation, leadership development and digital transformation — six integrated service pillars covering the full safety lifecycle."
+        subtitle="From HSE consulting and specialized domain safety to ISO implementation, leadership development, digital transformation and remote assurance — seven integrated service pillars covering the full safety lifecycle."
         breadcrumb="Services"
       />
       {SERVICES.map((s, i) => <ServiceDetail key={s.id} service={s} index={i} />)}
+      <RemoteAssurancePortfolio />
       <IndustrySolutions />
       <ConsultingProjects />
       <section className="py-16 bg-ink-950">
