@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply font-body bg-white text-ink-900 antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-display tracking-tight;
+  }
+  ::selection {
+    @apply bg-cyan/30 text-ink-900;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40;
+  }
+  .glass-dark {
+    @apply bg-ink-900/60 backdrop-blur-xl border border-white/10;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-btn font-medium text-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan/60;
+  }
+  .btn-primary {
+    @apply btn bg-primary-800 text-white shadow-elev hover:bg-primary-700 hover:-translate-y-0.5;
+  }
+  .btn-cyan {
+    @apply btn bg-gradient-to-r from-cyan to-cyan-light text-white shadow-glow hover:-translate-y-0.5 hover:shadow-glow;
+  }
+  .btn-accent {
+    @apply btn bg-accent text-ink-950 shadow-glow-accent hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply btn border border-white/30 text-white hover:bg-white/10;
+  }
+  .btn-ghost {
+    @apply btn text-primary-800 hover:bg-primary-800/10;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyan-light via-cyan to-accent bg-clip-text text-transparent;
+  }
+  .gradient-text-white {
+    @apply bg-gradient-to-r from-white via-cyan-light to-white bg-clip-text text-transparent;
+  }
+
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-cyan/30 bg-cyan/10 px-4 py-1.5 font-btn text-xs font-medium uppercase tracking-widest text-cyan;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-1.5;
+  }
+
+  .form-input {
+    @apply w-full rounded-xl bg-cloud border border-ink-900/10 px-4 py-2.5 text-sm text-ink-900 placeholder:text-ink-700/40 focus:outline-none focus:border-cyan/50 focus:ring-2 focus:ring-cyan/20 transition-all;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #07112a;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#0B2E6B, #00AEEF);
+  border-radius: 8px;
+}
