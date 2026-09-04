@@ -22,8 +22,9 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm leading-relaxed max-w-sm mb-6">
-              {COMPANY.website}. A global safety transformation consultancy specializing in
-              consulting, training, leadership development and digital HSE transformation.
+              A specialist HSE advisory and transformation consultancy providing senior HSE leadership,
+              management-system expertise, technical assurance and digital HSE solutions through flexible
+              remote, hybrid and project-based engagements.
             </p>
             <a
               href={`https://wa.me/${COMPANY.whatsappRaw}`}
