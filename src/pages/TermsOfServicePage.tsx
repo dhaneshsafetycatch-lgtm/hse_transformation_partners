@@ -1,61 +1,96 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, FileText, Scale, Handshake, AlertTriangle, Ban, Gavel, Mail } from 'lucide-react';
+import { ArrowLeft, FileText, UserCheck, Users, Ban, AlertTriangle, Clock, Shield, Lock, FileEdit, Mail } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
 import { COMPANY } from '../data/content';
 
 const SECTIONS = [
   {
     icon: FileText,
-    title: '1. Acceptance of Terms',
+    title: '1. Acceptance',
     content: [
-      'These Terms of Service ("Terms") constitute a legally binding agreement between you and HSE Transformation Partners governing your access to and use of our website, training programs, consulting services, digital platforms, and all related content and materials (collectively, the "Services").',
-      'By accessing or using any part of our Services, you confirm that you have read, understood, and agree to be bound by these Terms. If you are accessing our Services on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.',
-      'We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to this page. Your continued use of the Services after changes are posted constitutes acceptance of the revised Terms.',
+      'By accessing or using the HSE Daily Assurance & Verification System, users agree to these Terms of Service and applicable organizational policies.',
     ],
   },
   {
-    icon: Scale,
-    title: '2. Scope of Services',
+    icon: UserCheck,
+    title: '2. Authorized Use',
     content: [
-      'HSE Transformation Partners provides health, safety, and environmental consulting, training, leadership development, and digital HSE transformation services to organizations across multiple industry sectors including Oil & Gas, Construction, Infrastructure, Power, Aviation, Data Centres, and Manufacturing.',
-      'All service descriptions, pricing, and deliverables are subject to formal quotation and written agreement. Nothing on this website constitutes a binding offer or guarantee of service availability, pricing, or outcome.',
-      'Training programs are delivered in accordance with the standards and requirements of the relevant accrediting bodies (NEBOSH, IOSH, etc.). Certification is contingent upon successful completion of all required assessments and compliance with accreditation criteria.',
+      'The application is intended only for authorized HSE, operational, supervisory, management and administrative personnel.',
+      'Users may use the application only for legitimate occupational health, safety, environmental, operational-assurance and corrective-action purposes.',
     ],
   },
   {
-    icon: Handshake,
-    title: '3. Client Obligations',
+    icon: Users,
+    title: '3. User Responsibilities',
     content: [
-      'Clients engaging our consulting or training services agree to provide accurate, complete, and timely information necessary for the delivery of services. Delays caused by incomplete or inaccurate information may affect project timelines and deliverables.',
-      'For on-site consulting and training engagements, clients are responsible for ensuring safe access to facilities, compliance with site-specific safety requirements, and provision of necessary resources (meeting rooms, equipment, documentation) as agreed in the project scope.',
-      'Participants in training programs must meet any prerequisites specified for the course and comply with all attendance, assessment, and conduct requirements. We reserve the right to remove participants whose behaviour disrupts the learning environment.',
-    ],
-  },
-  {
-    icon: AlertTriangle,
-    title: '4. Intellectual Property',
-    content: [
-      'All content on this website, including text, graphics, logos, training materials, methodologies, frameworks, software, and digital tools, is the exclusive property of HSE Transformation Partners and is protected by copyright, trademark, and other intellectual property laws.',
-      'Training materials provided to participants are licensed for personal, non-commercial use only. Reproduction, distribution, modification, or creation of derivative works from our materials without express written permission is strictly prohibited.',
-      'Client-specific deliverables produced under consulting engagements are subject to the intellectual property provisions outlined in the individual service agreement. Unless otherwise agreed, general methodologies and frameworks remain our property.',
+      'Users are responsible for: providing accurate information; protecting their login credentials; maintaining confidentiality; reporting incidents through the required emergency and organizational channels; avoiding false, misleading or malicious submissions; uploading only relevant and authorized evidence; and following legal, contractual and organizational requirements.',
     ],
   },
   {
     icon: Ban,
-    title: '5. Limitation of Liability',
+    title: '4. Prohibited Activities',
     content: [
-      'Our consulting and training services are provided on a professional best-effort basis. While we apply rigorous methodologies and industry expertise, we do not guarantee specific outcomes, regulatory approvals, or elimination of all safety risks within client operations.',
-      'To the maximum extent permitted by applicable law, HSE Transformation Partners shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of our Services, even if advised of the possibility of such damages.',
-      'Our total aggregate liability for any claims arising from our Services shall not exceed the total fees paid by you for the specific service giving rise to the claim in the twelve (12) months preceding the claim.',
+      'Users must not: access the application without authorization; attempt to bypass security controls; submit knowingly false information; upload malware, unlawful material or unrelated personal data; share confidential records with unauthorized persons; interfere with application functionality; use information for harassment, retaliation or discrimination; or use the application for unlawful purposes.',
     ],
   },
   {
-    icon: Gavel,
-    title: '6. Governing Law & Disputes',
+    icon: AlertTriangle,
+    title: '5. Emergency and Legal Reporting',
     content: [
-      'These Terms shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law principles.',
-      'Any dispute arising from or relating to these Terms or our Services shall first be addressed through good-faith negotiation between the parties. If negotiation fails to resolve the dispute within thirty (30) days, either party may pursue resolution through arbitration or the courts of competent jurisdiction in India.',
-      'Notwithstanding the above, either party may seek injunctive or other equitable relief in any court of competent jurisdiction to protect its intellectual property rights or confidential information.',
+      'The application does not replace emergency calls, immediate verbal reporting, regulatory notifications or legally required incident-reporting procedures.',
+      'Users must follow the applicable site emergency plan and organizational escalation procedure.',
+    ],
+  },
+  {
+    icon: Clock,
+    title: '6. Availability',
+    content: [
+      'The application may occasionally be unavailable because of maintenance, internet failure, Google service interruption, technical issues or circumstances beyond reasonable control.',
+    ],
+  },
+  {
+    icon: Shield,
+    title: '7. Accuracy and Professional Judgement',
+    content: [
+      'Dashboards, alerts and reports depend on the accuracy and completeness of information submitted by users. The application supports but does not replace competent professional judgement.',
+    ],
+  },
+  {
+    icon: Lock,
+    title: '8. Intellectual Property',
+    content: [
+      'The application design, structure, content and related materials remain the property of HSE Transformation Partners or the applicable rights holder.',
+    ],
+  },
+  {
+    icon: Ban,
+    title: '9. Suspension of Access',
+    content: [
+      'Access may be suspended or terminated where a user violates these terms, creates a security risk or is no longer authorized by the organization.',
+    ],
+  },
+  {
+    icon: FileText,
+    title: '10. Limitation',
+    content: [
+      'To the extent permitted by law, HSE Transformation Partners is not responsible for losses caused by inaccurate submissions, unauthorized use, failure to follow emergency procedures, third-party service interruptions or actions taken contrary to professional advice.',
+    ],
+  },
+  {
+    icon: FileEdit,
+    title: '11. Changes',
+    content: [
+      'These terms may be updated when the application, legal requirements or operating practices change.',
+    ],
+  },
+  {
+    icon: Mail,
+    title: '12. Contact',
+    content: [
+      'For questions about these terms, contact:',
+      'HSE Transformation Partners',
+      `Website: https://www.hsetransformationpartners.in`,
+      `Developer and Application Support: ${COMPANY.devSupportEmail}`,
     ],
   },
 ];
@@ -63,7 +98,6 @@ const SECTIONS = [
 export default function TermsOfServicePage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}
       <section className="relative overflow-hidden bg-ink-950 pt-28 pb-16">
         <div className="absolute inset-0 bg-grid-dark bg-[size:50px_50px] opacity-30" />
         <div className="absolute bottom-0 right-1/3 h-64 w-64 bg-cyan/15 blur-[100px] rounded-full animate-float" />
@@ -77,18 +111,20 @@ export default function TermsOfServicePage() {
               Terms of <span className="gradient-text-white">Service</span>
             </h1>
             <p className="mt-4 text-white/60 max-w-2xl text-base md:text-lg">
-              The conditions governing your use of our website, training, and consulting services.
+              Terms of Service for the HSE Daily Assurance & Verification System.
             </p>
           </Reveal>
         </div>
       </section>
 
-      {/* Content */}
       <section className="section-pad bg-white">
         <div className="container-x max-w-4xl">
-          <div className="space-y-12">
+          <Reveal>
+            <p className="text-sm font-medium text-primary-800 mb-8">Last updated: 22 September 2026</p>
+          </Reveal>
+          <div className="space-y-8">
             {SECTIONS.map((section, i) => (
-              <Reveal key={section.title} delay={i * 80}>
+              <Reveal key={section.title} delay={i * 50}>
                 <div className="rounded-2xl bg-cloud border border-ink-900/8 p-6 md:p-8 card-hover">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-800 to-primary-600 text-cyan-light shrink-0">
@@ -108,29 +144,22 @@ export default function TermsOfServicePage() {
             ))}
           </div>
 
-          {/* Contact */}
           <Reveal>
             <div className="mt-12 rounded-2xl bg-ink-950 p-6 md:p-8 relative overflow-hidden">
               <div className="absolute inset-0 bg-grid-dark bg-[size:40px_40px] opacity-20" />
               <div className="relative">
                 <h2 className="font-display text-lg font-bold text-white mb-3">Questions About These Terms?</h2>
                 <p className="text-sm text-white/60 leading-relaxed mb-4">
-                  If you have any questions about these Terms of Service, please contact us before using our Services.
+                  If you have any questions about these Terms of Service, please contact us before using the application.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a href={`mailto:${COMPANY.email}`} className="btn-cyan text-sm px-5 py-2.5 inline-flex items-center gap-2">
+                  <a href={`mailto:${COMPANY.devSupportEmail}`} className="btn-cyan text-sm px-5 py-2.5 inline-flex items-center gap-2">
                     <Mail className="h-4 w-4" />
-                    {COMPANY.email}
+                    {COMPANY.devSupportEmail}
                   </a>
                 </div>
               </div>
             </div>
-          </Reveal>
-
-          <Reveal>
-            <p className="mt-8 text-xs text-ink-500 text-center">
-              Last updated: {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
-            </p>
           </Reveal>
         </div>
       </section>

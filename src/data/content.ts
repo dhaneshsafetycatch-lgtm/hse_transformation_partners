@@ -16,6 +16,7 @@ export const COMPANY = {
   domain: 'hsetransformationparnters.in',
   linkedin: 'https://www.linkedin.com/in/dhanesh-manoharan',
   website: 'Global HSE Consulting | Training | Digital Solutions | Safety Transformation',
+  devSupportEmail: 'dhaneshkmd82@gmail.com',
 };
 
 export const STATS = [

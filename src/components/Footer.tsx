@@ -99,9 +99,11 @@ export default function Footer() {
 
         <div className="mt-14 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
           <p>© {new Date().getFullYear()} {COMPANY.name}. All rights reserved.</p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center flex-wrap gap-6">
+            <Link to="/hse-daily-assurance" className="hover:text-cyan-light transition-colors">HSE Daily Assurance</Link>
             <Link to="/privacy-policy" className="hover:text-cyan-light transition-colors">Privacy Policy</Link>
             <Link to="/terms-of-service" className="hover:text-cyan-light transition-colors">Terms of Service</Link>
+            <Link to="/contact" className="hover:text-cyan-light transition-colors">Contact</Link>
           </div>
         </div>
       </div>

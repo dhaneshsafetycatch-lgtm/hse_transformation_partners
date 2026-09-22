@@ -15,6 +15,7 @@ import CalculatorPage from './pages/CalculatorPage';
 import PartnershipPage from './pages/PartnershipPage';
 import HseAsAServicePage from './pages/HseAsAServicePage';
 import IndustriesPage from './pages/IndustriesPage';
+import HseDailyAssurancePage from './pages/HseDailyAssurancePage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsOfServicePage from './pages/TermsOfServicePage';
 
@@ -42,6 +43,7 @@ export default function App() {
             <Route path="/partnership" element={<PartnershipPage />} />
             <Route path="/hse-as-a-service" element={<HseAsAServicePage />} />
             <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/hse-daily-assurance" element={<HseDailyAssurancePage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/terms-of-service" element={<TermsOfServicePage />} />

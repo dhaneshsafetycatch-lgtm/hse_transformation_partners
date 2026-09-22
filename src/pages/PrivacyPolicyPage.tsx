@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Shield, Lock, Database, Eye, Mail, Clock } from 'lucide-react';
+import { ArrowLeft, Shield, Database, Eye, Lock, Cloud, Share2, HardDrive, Clock, KeyRound, Users, RotateCcw, Baby, FileEdit, Mail } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
 import { COMPANY } from '../data/content';
 
@@ -8,53 +8,118 @@ const SECTIONS = [
     icon: Shield,
     title: '1. Introduction',
     content: [
-      'HSE Transformation Partners ("we", "us", "our") is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, store, and safeguard your personal information when you interact with our website, services, training programs, and digital platforms.',
-      'By accessing our website or engaging our services, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with any aspect of this policy, please discontinue use of our services immediately.',
+      'HSE Transformation Partners respects the privacy of individuals who use the HSE Daily Assurance & Verification System. This Privacy Policy explains what information the application collects, why the information is processed, how it is used and stored, and the choices available to users.',
+      'This policy applies to the HSE Daily Assurance & Verification System and the supporting website pages operated through hsetransformationpartners.in.',
     ],
   },
   {
     icon: Database,
     title: '2. Information We Collect',
     content: [
-      'We collect information that you voluntarily provide when submitting enquiries, registering for training programs, or engaging our consulting services. This may include your name, email address, telephone number, company name, job title, and any additional details you choose to share.',
-      'We also collect technical information automatically through standard web analytics, including your IP address, browser type, device information, pages visited, and time spent on our website. This data helps us improve user experience and website performance.',
-      'For training and certification programs, we may collect additional professional information necessary for accreditation, certification issuance, and compliance with regulatory requirements.',
+      'Depending on how the application is configured and used, we may collect:',
+      'Name, employee ID, business email address and professional role. Employer, contractor, project, site and work-location information. Workforce, shift, permit and work-activity information. HSE inspection findings and critical-control verification results. Incident, injury, near-miss and stop-work information. Corrective actions, action owners, due dates and closure information. Photographs, PDFs and other supporting evidence uploaded by users. Google account email address where made available during authorized access. Submission timestamps, report identifiers and audit information. Technical information necessary to maintain application security and functionality.',
+      'Users must not submit unnecessary sensitive personal information.',
     ],
   },
   {
     icon: Eye,
-    title: '3. How We Use Your Information',
+    title: '3. How We Use Information',
     content: [
-      'We use your personal information to respond to enquiries, deliver consulting and training services, process registrations, issue certifications, and provide ongoing support. Your information enables us to tailor our services to your specific industry, sector, and safety requirements.',
-      'We may use your contact details to send service updates, training schedules, industry insights, and safety bulletins that we believe are relevant to your professional interests. You may opt out of marketing communications at any time.',
-      'Technical analytics data is used exclusively for website optimization, security monitoring, and understanding how visitors interact with our digital platforms.',
+      'Information is used to: record daily HSE activities; verify critical risk controls; report incidents, near misses and stop-work interventions; assign and monitor corrective actions; verify action completion and effectiveness; produce management dashboards and performance indicators; identify overdue and high-priority HSE matters; send configured alerts and operational notifications; maintain audit trails; support investigations, legal compliance and organizational learning; and protect people, operations, assets and the environment.',
+    ],
+  },
+  {
+    icon: Cloud,
+    title: '4. Use of Google Services',
+    content: [
+      'The application may use Google Sheets to store structured HSE records, Google Drive to store uploaded evidence and Google email services to send authorized alerts and notifications.',
+      'The application requests only the Google permissions required to provide its stated functions.',
     ],
   },
   {
     icon: Lock,
-    title: '4. Data Security & Protection',
+    title: '5. Google API Services User Data Policy',
     content: [
-      'We implement industry-standard technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. These measures include encrypted data transmission, secure server infrastructure, access controls, and regular security assessments.',
-      'All data is stored on secure cloud infrastructure with redundancy and disaster recovery protocols. Access to personal data is restricted to authorized personnel who require it to perform their duties.',
-      'While we take every reasonable precaution, no internet-based system can be guaranteed completely secure. We encourage you to use strong passwords and report any suspected security concerns immediately.',
+      'The use and transfer of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.',
+      'Information received from Google APIs will not be: sold to third parties; used for advertising; used to determine creditworthiness; transferred to unrelated parties except where required to provide the application, comply with law, protect safety or respond to a valid legal requirement; or accessed by humans except where necessary for security, support, compliance, investigation or with the user\u2019s authorization.',
+    ],
+  },
+  {
+    icon: Share2,
+    title: '6. Information Sharing',
+    content: [
+      'Information may be accessible to authorized: HSE personnel; site and project management; designated action owners; system administrators; emergency and investigation personnel; regulatory or legal authorities when required by law; and approved service providers supporting secure application operation.',
+      'We do not sell personal information.',
+    ],
+  },
+  {
+    icon: HardDrive,
+    title: '7. Data Storage',
+    content: [
+      'Application data may be stored in Google Sheets, Google Drive and other authorized Google Workspace services controlled by the application owner or the organization operating the system.',
+      'Access is managed through Google account permissions, application controls and organizational authorization.',
     ],
   },
   {
     icon: Clock,
-    title: '5. Data Retention',
+    title: '8. Data Retention',
     content: [
-      'We retain personal data only for as long as necessary to fulfill the purposes for which it was collected, comply with legal obligations, resolve disputes, and enforce our agreements.',
-      'Training and certification records are retained in accordance with accreditation body requirements and industry best practices, typically for a minimum of five years.',
-      'When data is no longer required, we securely delete or anonymize it in a manner that prevents recovery or identification.',
+      'Information is retained only for as long as reasonably required for: HSE management; incident investigation; corrective-action monitoring; legal and regulatory compliance; contractual requirements; insurance requirements; and audit and organizational learning.',
+      'Retention periods may differ depending on the organization, jurisdiction, contract and type of HSE record.',
+    ],
+  },
+  {
+    icon: Shield,
+    title: '9. Security',
+    content: [
+      'Reasonable administrative and technical safeguards are used to protect information. These may include access restrictions, authenticated accounts, audit records, controlled sharing and permission management.',
+      'No online system can guarantee absolute security. Users must protect their Google account credentials and immediately report suspected unauthorized access.',
+    ],
+  },
+  {
+    icon: Users,
+    title: '10. User Responsibilities',
+    content: [
+      'Users must: submit accurate and relevant information; avoid uploading unnecessary personal or confidential information; use the application only for authorized business purposes; protect account credentials; report security concerns promptly; and follow applicable organizational policies and legal requirements.',
+    ],
+  },
+  {
+    icon: KeyRound,
+    title: '11. User Rights and Requests',
+    content: [
+      'Subject to applicable laws and organizational requirements, users may request: access to their personal information; correction of inaccurate information; deletion of information where legally permitted; clarification regarding how information is used; and withdrawal of authorization where applicable.',
+      'Some records may need to be retained for legal, regulatory, contractual, investigation or safety reasons.',
+    ],
+  },
+  {
+    icon: RotateCcw,
+    title: '12. Revoking Google Access',
+    content: [
+      'Users may review or revoke application access through their Google Account security settings. Revoking access may prevent some application functions from operating.',
+    ],
+  },
+  {
+    icon: Baby,
+    title: '13. Children\u2019s Privacy',
+    content: [
+      'The application is intended for authorized adult employees, contractors and organizational representatives. It is not directed toward children.',
+    ],
+  },
+  {
+    icon: FileEdit,
+    title: '14. Changes to This Policy',
+    content: [
+      'This Privacy Policy may be updated to reflect changes in the application, legal requirements or organizational practices. The latest version will remain publicly available on this page.',
     ],
   },
   {
     icon: Mail,
-    title: '6. Your Rights',
+    title: '15. Contact',
     content: [
-      'You have the right to access, correct, update, or request deletion of your personal information at any time. You may also request a copy of the data we hold about you in a structured, machine-readable format.',
-      'To exercise any of these rights, please contact us using the details provided below. We will respond to all legitimate requests within the timeframes required by applicable data protection laws.',
-      'If you believe we have not handled your personal data appropriately, you have the right to lodge a complaint with the relevant data protection authority in your jurisdiction.',
+      'For privacy enquiries, access requests, correction requests, deletion requests or complaints, contact:',
+      'HSE Transformation Partners',
+      `Website: https://www.hsetransformationpartners.in`,
+      `Developer and Application Support: ${COMPANY.devSupportEmail}`,
     ],
   },
 ];
@@ -62,7 +127,6 @@ const SECTIONS = [
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}
       <section className="relative overflow-hidden bg-ink-950 pt-28 pb-16">
         <div className="absolute inset-0 bg-grid-dark bg-[size:50px_50px] opacity-30" />
         <div className="absolute bottom-0 left-1/3 h-64 w-64 bg-cyan/15 blur-[100px] rounded-full animate-float" />
@@ -76,18 +140,20 @@ export default function PrivacyPolicyPage() {
               Privacy <span className="gradient-text-white">Policy</span>
             </h1>
             <p className="mt-4 text-white/60 max-w-2xl text-base md:text-lg">
-              How we collect, protect, and manage your personal information.
+              Privacy Policy for the HSE Daily Assurance & Verification System.
             </p>
           </Reveal>
         </div>
       </section>
 
-      {/* Content */}
       <section className="section-pad bg-white">
         <div className="container-x max-w-4xl">
-          <div className="space-y-12">
+          <Reveal>
+            <p className="text-sm font-medium text-primary-800 mb-8">Last updated: 22 September 2026</p>
+          </Reveal>
+          <div className="space-y-8">
             {SECTIONS.map((section, i) => (
-              <Reveal key={section.title} delay={i * 80}>
+              <Reveal key={section.title} delay={i * 50}>
                 <div className="rounded-2xl bg-cloud border border-ink-900/8 p-6 md:p-8 card-hover">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-800 to-primary-600 text-cyan-light shrink-0">
@@ -107,29 +173,22 @@ export default function PrivacyPolicyPage() {
             ))}
           </div>
 
-          {/* Contact */}
           <Reveal>
             <div className="mt-12 rounded-2xl bg-ink-950 p-6 md:p-8 relative overflow-hidden">
               <div className="absolute inset-0 bg-grid-dark bg-[size:40px_40px] opacity-20" />
               <div className="relative">
                 <h2 className="font-display text-lg font-bold text-white mb-3">Contact Us</h2>
                 <p className="text-sm text-white/60 leading-relaxed mb-4">
-                  If you have any questions about this Privacy Policy or how we handle your personal data, please contact us.
+                  For privacy enquiries or data requests, please contact us.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a href={`mailto:${COMPANY.email}`} className="btn-cyan text-sm px-5 py-2.5 inline-flex items-center gap-2">
+                  <a href={`mailto:${COMPANY.devSupportEmail}`} className="btn-cyan text-sm px-5 py-2.5 inline-flex items-center gap-2">
                     <Mail className="h-4 w-4" />
-                    {COMPANY.email}
+                    {COMPANY.devSupportEmail}
                   </a>
                 </div>
               </div>
             </div>
-          </Reveal>
-
-          <Reveal>
-            <p className="mt-8 text-xs text-ink-500 text-center">
-              Last updated: {new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
-            </p>
           </Reveal>
         </div>
       </section>

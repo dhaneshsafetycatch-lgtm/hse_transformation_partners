@@ -44,6 +44,7 @@ export default function ContactPage() {
   const cards = [
     { icon: Mail, label: 'Email', value: COMPANY.email, href: `mailto:${COMPANY.email}` },
     { icon: Phone, label: 'WhatsApp / Phone', value: COMPANY.whatsapp, href: `https://wa.me/${COMPANY.whatsappRaw}` },
+    { icon: Mail, label: 'Developer & Application Support', value: COMPANY.devSupportEmail, href: `mailto:${COMPANY.devSupportEmail}` },
     { icon: MapPin, label: 'Serving', value: 'India | Middle East | International' },
     { icon: Linkedin, label: 'LinkedIn', value: 'Dhanesh Manoharan', href: COMPANY.linkedin },
   ];
@@ -147,6 +148,41 @@ export default function ContactPage() {
               </Reveal>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Data requests */}
+      <section className="py-14 bg-white border-t border-primary-900/5">
+        <div className="container-x max-w-4xl">
+          <SectionHeading
+            eyebrow="Privacy & Data Requests"
+            title={<>Data access, correction & <span className="gradient-text">deletion requests</span></>}
+            subtitle="For privacy enquiries, data access, correction or deletion requests related to the HSE Daily Assurance & Verification System, please contact us using the details above."
+          />
+          <Reveal>
+            <div className="mt-8 rounded-2xl bg-cloud border border-primary-900/5 p-7">
+              <div className="grid gap-6 sm:grid-cols-3">
+                <div>
+                  <h3 className="font-display text-sm font-bold text-ink-900">Access Requests</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-ink-700">Request a copy of the personal information the application holds about you.</p>
+                </div>
+                <div>
+                  <h3 className="font-display text-sm font-bold text-ink-900">Correction Requests</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-ink-700">Request correction of inaccurate or outdated information held in the system.</p>
+                </div>
+                <div>
+                  <h3 className="font-display text-sm font-bold text-ink-900">Deletion Requests</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-ink-700">Request deletion of information where legally permitted. Some records may need to be retained for legal or safety reasons.</p>
+                </div>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href={`mailto:${COMPANY.devSupportEmail}`} className="btn-primary text-xs px-4 py-2.5">Email Developer Support</a>
+                <Link to="/privacy-policy" className="btn-ghost text-xs px-4 py-2.5">Privacy Policy</Link>
+                <Link to="/terms-of-service" className="btn-ghost text-xs px-4 py-2.5">Terms of Service</Link>
+                <Link to="/hse-daily-assurance" className="btn-ghost text-xs px-4 py-2.5">HSE Daily Assurance</Link>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
