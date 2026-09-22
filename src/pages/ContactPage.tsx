@@ -1,14 +1,21 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Send, CheckCircle2, AlertCircle, Loader2, MessageCircle, Clock, Globe2 } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import { Reveal } from '../components/Reveal';
 import { supabase } from '../lib/supabase';
 import { COMPANY, SERVICES } from '../data/content';
+import { usePageMeta } from '../lib/usePageMeta';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
 export default function ContactPage() {
+  usePageMeta({
+    title: 'Contact and Application Support – HSE Transformation Partners',
+    description: 'Contact HSE Transformation Partners for HSE consulting, application support, privacy enquiries, data access, correction and deletion requests.',
+    path: '/contact',
+  });
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
   const [form, setForm] = useState({

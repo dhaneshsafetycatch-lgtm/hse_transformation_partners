@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, FileText, UserCheck, Users, Ban, AlertTriangle, Clock, Shield, Lock, FileEdit, Mail } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
 import { COMPANY } from '../data/content';
+import { usePageMeta } from '../lib/usePageMeta';
 
 const SECTIONS = [
   {
@@ -96,6 +97,11 @@ const SECTIONS = [
 ];
 
 export default function TermsOfServicePage() {
+  usePageMeta({
+    title: 'Terms of Service – HSE Daily Assurance & Verification System',
+    description: 'Terms of Service for the HSE Daily Assurance & Verification System. The conditions governing authorized use of the application.',
+    path: '/terms-of-service',
+  });
   return (
     <div className="min-h-screen bg-white">
       <section className="relative overflow-hidden bg-ink-950 pt-28 pb-16">

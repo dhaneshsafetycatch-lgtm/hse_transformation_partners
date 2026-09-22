@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Shield, Database, Eye, Lock, Cloud, Share2, HardDrive, Clock, KeyRound, Users, RotateCcw, Baby, FileEdit, Mail } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
 import { COMPANY } from '../data/content';
+import { usePageMeta } from '../lib/usePageMeta';
 
 const SECTIONS = [
   {
@@ -125,6 +126,11 @@ const SECTIONS = [
 ];
 
 export default function PrivacyPolicyPage() {
+  usePageMeta({
+    title: 'Privacy Policy – HSE Daily Assurance & Verification System',
+    description: 'Privacy Policy for the HSE Daily Assurance & Verification System. How HSE Transformation Partners collects, uses, stores and protects information.',
+    path: '/privacy-policy',
+  });
   return (
     <div className="min-h-screen bg-white">
       <section className="relative overflow-hidden bg-ink-950 pt-28 pb-16">

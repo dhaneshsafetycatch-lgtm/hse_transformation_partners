@@ -8,6 +8,7 @@ import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import { Reveal } from '../components/Reveal';
 import { COMPANY } from '../data/content';
+import { usePageMeta } from '../lib/usePageMeta';
 
 const CORE_FUNCTIONS = [
   { icon: Calendar, title: 'Shift Start & Daily Risk Forecast', desc: 'Record shift-start HSE conditions and forecast daily risks.' },
@@ -41,6 +42,11 @@ const GOOGLE_SERVICES = [
 ];
 
 export default function HseDailyAssurancePage() {
+  usePageMeta({
+    title: 'HSE Daily Assurance & Verification System',
+    description: 'A secure digital HSE reporting, critical-control verification, incident management and corrective-action monitoring system for organizations and project sites.',
+    path: '/hse-daily-assurance',
+  });
   return (
     <>
       <PageHero
